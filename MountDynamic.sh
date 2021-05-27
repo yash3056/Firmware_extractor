@@ -12,7 +12,7 @@ echo "Extracting Required Partitions . . . . "
 	mv $LOCALDIR/out/system.img $LOCALDIR/out/system-old.img
 
 echo "Creating Dummy System Image . . . . "
-    dd if=/dev/zero of=$LOCALDIR/out/system-new.img bs=5k count=1048576
+    dd if=/dev/zero of=$LOCALDIR/out/system-new.img bs=4k count=1048576
     mkfs.ext4 $LOCALDIR/out/system-new.img
     tune2fs -c0 -i0 $LOCALDIR/out/system-new.img
 
